@@ -10,7 +10,7 @@
 name: Schedule check and release of assignments
 on:
   schedule:
-    - cron: '15 9 * * MON'
+    - cron: '50 * * * *'
 
 jobs:
   create_issue:
@@ -34,7 +34,9 @@ jobs:
             - [ ] Release coursework assignments on Google Classroom
 
             ### Notes
-                    
+          
+          project: "Flipped classroom planning project"
+          status: "Todo"       
           pinned: false
           close-previous: false
         env:
