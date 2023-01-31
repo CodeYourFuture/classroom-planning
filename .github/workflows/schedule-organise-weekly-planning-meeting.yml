@@ -10,7 +10,7 @@
 name: Schedule organisation of planning meeting
 on:
   schedule:
-    - cron: '50 * * * *'
+    - cron: '15 * * * *'
 
 jobs:
   create_issue:
@@ -48,7 +48,7 @@ jobs:
 
               🖱  **Zoom admin** - volunteer in charge of creating/opening/closing breakout rooms. Also in charge of recording call ( if needed )
 
-          project: "Flipped classroom planning project"
+          project: 49
           status: "Todo"
           pinned: false
           close-previous: false
