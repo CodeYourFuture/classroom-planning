@@ -1,56 +1,56 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
+# # This workflow uses actions that are not certified by GitHub.
+# # They are provided by a third-party and are governed by
+# # separate terms of service, privacy policy, and support
+# # documentation.
 
-# GitHub recommends pinning actions to a commit SHA.
-# To get a newer version, you will need to update the SHA.
-# You can also reference a tag or branch, but the action may change without warning.
+# # GitHub recommends pinning actions to a commit SHA.
+# # To get a newer version, you will need to update the SHA.
+# # You can also reference a tag or branch, but the action may change without warning.
 
-name: Schedule organisation of planning meeting
-on:
-  schedule:
-    - cron: '15 * * * *'
+# name: Schedule organisation of planning meeting
+# on:
+#   schedule:
+#     - cron: '15 * * * *'
 
-jobs:
-  create_issue:
-    name: Organise weekly planning meeting 
-    runs-on: ubuntu-latest
-    permissions:
-      issues: write
-    steps:
-      - name: Organise weekly planning meeting 
-        uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
-        with:
-          assignees: ""
-          labels: ""
-          title: "Organise weekly planning meeting"
-          body: |
-              Assignee(s) needs to organise a weekly planning meeting to organise the Saturday agenda and allocate volunteers to various slots during the day.
-              In planning meeting:
+# jobs:
+#   create_issue:
+#     name: Organise weekly planning meeting 
+#     runs-on: ubuntu-latest
+#     permissions:
+#       issues: write
+#     steps:
+#       - name: Organise weekly planning meeting 
+#         uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
+#         with:
+#           assignees: ""
+#           labels: ""
+#           title: "Organise weekly planning meeting"
+#           body: |
+#               Assignee(s) needs to organise a weekly planning meeting to organise the Saturday agenda and allocate volunteers to various slots during the day.
+#               In planning meeting:
 
-              ## Things to do:
+#               ## Things to do:
 
-              - [ ] Organise agenda
-              - [ ] Assign volunteers to **roles** ( see below )
-              - [ ] Post message asking for volunteers on Saturdays
+#               - [ ] Organise agenda
+#               - [ ] Assign volunteers to **roles** ( see below )
+#               - [ ] Post message asking for volunteers on Saturdays
 
 
-              ## Saturday roles
+#               ## Saturday roles
 
-              🇦‍🇽 **Time keeper** (NEW) - someone to make sure that volunteers and trainees stick to the agenda.
+#               🇦‍🇽 **Time keeper** (NEW) - someone to make sure that volunteers and trainees stick to the agenda.
 
-              🎓 **Recap facilitators** (NEW) - volunteers happy to facilitate short sessions between 45 mins / 1 hour in smaller groups
+#               🎓 **Recap facilitators** (NEW) - volunteers happy to facilitate short sessions between 45 mins / 1 hour in smaller groups
 
-              🧪 **Kata solution demos** (NEW) - volunteers happy to demo a kata solution using TDD
+#               🧪 **Kata solution demos** (NEW) - volunteers happy to demo a kata solution using TDD
 
-              🌩 **Energiser** -  trainee/volunteer responsible for leading energising session
+#               🌩 **Energiser** -  trainee/volunteer responsible for leading energising session
 
-              🖱  **Zoom admin** - volunteer in charge of creating/opening/closing breakout rooms. Also in charge of recording call ( if needed )
+#               🖱  **Zoom admin** - volunteer in charge of creating/opening/closing breakout rooms. Also in charge of recording call ( if needed )
 
-          project: 49
-          status: "Todo"
-          pinned: false
-          close-previous: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#           project: 49
+#           status: "Todo"
+#           pinned: false
+#           close-previous: false
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
