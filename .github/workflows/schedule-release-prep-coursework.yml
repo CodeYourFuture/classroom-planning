@@ -1,0 +1,43 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# GitHub recommends pinning actions to a commit SHA.
+# To get a newer version, you will need to update the SHA.
+# You can also reference a tag or branch, but the action may change without warning.
+
+name: Weekly Team Sync
+on:
+  schedule:
+    - cron: '15 9 * * MON'
+
+jobs:
+  create_issue:
+    name: Check prep work material
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Check prep work material
+        uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
+        with:
+          assignees: ""
+          labels: ""
+          title: "Release prep and coursework assignments"
+          body: |
+            ### Actions
+
+            - [ ] Check [YouTube channel for playlist](https://www.youtube.com/@codeyourfutureyoutube/playlists)
+            - [ ] Ensure that coursework material's due date is set for one week after the Tuesday it is released.
+            - [ ] Ensure that prep work's due date is scheduled for the upcoming Saturday
+            - [ ] Release coursework assignments on Google Classroom
+
+            ### Notes
+                    
+          pinned: false
+          close-previous: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  
