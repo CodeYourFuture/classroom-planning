@@ -7,7 +7,7 @@
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
 
-name: Weekly Team Sync
+name: Schedule organisation of planning meeting
 on:
   schedule:
     - cron: '15 9 * * MON'
@@ -24,7 +24,7 @@ jobs:
         with:
           assignees: ""
           labels: ""
-          title: "Release prep and coursework assignments"
+          title: "Organise weekly planning meeting"
           body: |
               Assignee(s) needs to organise a weekly planning meeting to organise the Saturday agenda and allocate volunteers to various slots during the day.
               In planning meeting:
